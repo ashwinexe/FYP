@@ -1,9 +1,11 @@
-# F00d_recognition
-Food recognition using streamlit with inception v3 backend
-#### Deployed at [Streamlit](https://share.streamlit.io/sirreajohn/f00d_recognition/f00d_recog_inception.py)
-Every one likes food! This deployment recognizes 11 different classes of food using a SOTA Inception V3 Transfer Learning.\n
+# An AI Based Neutirend Tracking and Analysis
+Food recognition deployed on streamlit with inception v3 backend
+#### Deployed at [Streamlit](https://ashwinexe-fyp-f00d-recog-inception-bhdsz4.streamlit.app/)
 
-### Inception V3
+
+In this project, we propose a novel system based on artificial intelligence (AI) to accurately estimate nutrient intake, by processing image pairs captured in day meal consumption. This allows sequential food segmentation, recognition, and estimation of the consumed food volume, permitting fully automatic estimation of the nutrient intake for each meal. For this development and evaluation of the system, a dedicated new database containing images and nutrient recipes of large variety of meals must be assembled and coupled.
+
+### Learning details
 - The paper for Inception can be found [here](https://arxiv.org/abs/1512.00567v3)
 
 - The paper implementation using pytorch can be found [here](https://github.com/pytorch/vision/blob/6db1569c89094cf23f3bc41f79275c45e9fcb3f3/torchvision/models/inception.py#L64)

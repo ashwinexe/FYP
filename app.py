@@ -71,17 +71,16 @@ model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 ss.set_page_config(page_title = "Food Recognition using Inception V3", layout = "wide")
-ss.title("Food Recognition using inception-V3")
+ss.title("An AI Based Neutirend Tracking and Analysis ")
 
 ss.markdown(
 '''
-Every one likes food! This deployment recognizes 11 different classes of food using a SOTA Inception V3 Transfer Learning.\n
+This is the final year group project for IV-A Batch 13\n
 ''')
 
-ss.image("f1.jpg")
+# ss.image("f1.jpg")
 ss.markdown(
 '''
-### Inception V3
 - The paper for Inception can be found [here](https://arxiv.org/abs/1512.00567v3)\n
 
 - The paper implementation using pytorch can be found [here](https://github.com/pytorch/vision/blob/6db1569c89094cf23f3bc41f79275c45e9fcb3f3/torchvision/models/inception.py#L64)
@@ -130,6 +129,11 @@ if image_path:
   ss.plotly_chart(preds)
   
 
-
+ss.markdown('''
+This project is made by
+- Ashwin Kumar Uppala 19311A1901
+- Sanjana Reddy 19311A1908
+- Raveena Ganji 19311A1958
+''')
 
 
