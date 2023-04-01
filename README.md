@@ -37,3 +37,10 @@ the categories of food that can be classified are
     - Vegetable-fruit
     
 Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)
+
+This project is made by:
+- Ashwin Kumar Uppala 19311A1901
+- Sanjana Reddy 19311A1908
+- Raveena Ganji 19311A1958
+
+ECM IV A Batch 13
