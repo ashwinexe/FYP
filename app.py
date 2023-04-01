@@ -75,7 +75,7 @@ ss.title("An AI Based Neutirend Tracking and Analysis ")
 
 ss.markdown(
 '''
-This is the final year group project for IV-A Batch 13\n
+This is the final year group project for ECM IV-A Batch 13\n
 ''')
 
 # ss.image("f1.jpg")
