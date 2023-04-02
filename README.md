@@ -1,4 +1,6 @@
 # An AI Based Neutirend Tracking and Analysis
+2019 ECM IV A Batch 13
+
 Food recognition deployed on streamlit with inception v3 backend
 #### Deployed at [Streamlit](https://ashwinexe-fyp-f00d-recog-inception-bhdsz4.streamlit.app/)
 
@@ -43,4 +45,3 @@ This project is made by:
 - Sanjana Reddy 19311A1908
 - Raveena Ganji 19311A1958
 
-ECM IV A Batch 13
