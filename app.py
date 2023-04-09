@@ -53,22 +53,12 @@ def inception_no_gen(image):
   predictions = model_saved.predict(input_arr)
   return dic_maker_tuple(dic_maker(predictions))
 
-def plot_pred_final(test_imgs):
+def predictNutrition(test_imgs):
   global food
-  """
-  dis takes in {1:prob(1),2:prob(2)}
-
-  """
-  #test_imgs = glob(image_path_custom + '/*/*.jpeg')
-  fig = make_subplots(rows = 2, cols = 2)
-  pred_list = inception_no_gen(test_imgs)
-  fig.append_trace(go.Image(z = np.array(test_imgs)),1,1)
-  fig.append_trace(go.Bar(y = list(pred_list.keys()), x = list(pred_list.values()),orientation = 'h'),1,2)
-  fig.update_layout(width = 1750, height = 800,title_text = "Custom Predictions",showlegend = False)
   print('--------------')
   food = list(inception_no_gen(test_imgs).keys())[0]
   print(food)
-  return fig
+
 
 #------streamlit starts here----------------
 
@@ -125,9 +115,8 @@ image_path = ss.file_uploader("drop the image file here: ", type = ["jpg", "jpeg
 
 if image_path:
   image = Image.open(image_path)
-  preds = plot_pred_final(image)
-  ss.plotly_chart(preds)
-
+  predictNutrition(image)
+  ss.image(image)
   ss.write("Nutrient Intake:-")
   ss.warning('**'+food+'(Intake)**'+': '+str(target_nutrition[food])+' calories')
   print(food)
