@@ -15,6 +15,7 @@ from tensorflow.keras.applications.inception_v3 import InceptionV3,preprocess_in
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
+# food =  "none"
 
 def dic_maker(arr):
   """ dis takes in arr [[prob(1),prob(2),prob(3)......prob(n)]]
@@ -53,6 +54,7 @@ def inception_no_gen(image):
   return dic_maker_tuple(dic_maker(predictions))
 
 def plot_pred_final(test_imgs):
+  global food
   """
   dis takes in {1:prob(1),2:prob(2)}
 
@@ -63,13 +65,19 @@ def plot_pred_final(test_imgs):
   fig.append_trace(go.Image(z = np.array(test_imgs)),1,1)
   fig.append_trace(go.Bar(y = list(pred_list.keys()), x = list(pred_list.values()),orientation = 'h'),1,2)
   fig.update_layout(width = 1750, height = 800,title_text = "Custom Predictions",showlegend = False)
+  print('--------------')
+  food = list(inception_no_gen(test_imgs).keys())[0]
+  print(food)
   return fig
 
 #------streamlit starts here----------------
 
 model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5")
-target_dict = {0:"Bread",1:"Dairy_product, 200 calorie",2:"Dessert",3:"Egg",4:"Fried_food",
+target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
+
+target_nutrition = {"Bread": 67, "Dairy_product": 200, "Dessert": 140, "Egg": 75, "Fried_food": 196,
+                 "Meat": 143, "Noodles/Pasta": 138, "Rice": 130, "Seafood": 204, "Soup": 74, "veggies/Fruit": 52}
 ss.set_page_config(page_title = "Food Recognition using Inception V3", layout = "wide")
 ss.title("An AI Based Neutirend Tracking and Analysis ")
 
@@ -120,10 +128,10 @@ if image_path:
   preds = plot_pred_final(image)
   ss.plotly_chart(preds)
 
-  # cal = preds
-  # ss.write("Nutrient Intake:-")
-  # ss.warning('**'+cal+'(Intake)**')
-  
+  ss.write("Nutrient Intake:-")
+  ss.warning('**'+food+'(Intake)**'+': '+str(target_nutrition[food])+' calories')
+  print(food)
+  print(target_nutrition[food])
 
 ss.markdown('''
 This project is made by
