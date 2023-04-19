@@ -76,8 +76,8 @@ model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 
-target_nutrition = {"Bread": 67, "Dairy_product": 200, "Dessert": 140, "Egg": 75, "Fried_food": 196,
-                 "Meat": 143, "Noodles/Pasta": 138, "Rice": 130, "Seafood": 204, "Soup": 74, "veggies/Fruit": 52}
+target_nutrition = {"Bread": 108, "Dairy_product": 100, "Dessert": 279, "Egg": 220, "Fried_food": 378,
+                 "Meat": 269, "Noodles/Pasta": 219, "Rice": 184, "Seafood": 395, "Soup": 58, "veggies/Fruit": 93}
 ss.set_page_config(page_title = "Food Recognition using Inception V3", layout = "wide")
 ss.title("An AI Based Neutirend Tracking and Analysis ")
 
