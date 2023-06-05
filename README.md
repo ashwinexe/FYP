@@ -10,7 +10,7 @@ In this project, we propose a novel system based on artificial intelligence (AI)
 ### Learning details
 
 #### Block Diagram
-![](block_diagram.png)
+![](block_diagram.jpeg)
 - Training on 16,600 images yielded 90% accuracy on train and 76% accuracy on validation. over 50 epochs!
 - This model is saved and used later
 

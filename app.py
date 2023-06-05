@@ -97,7 +97,7 @@ ss.markdown(
 '''
 ### Block Diagram
 ''')
-ss.image("block_diagram.png")
+ss.image("block_diagram.jpeg")
 
 ss.markdown('### Dataset Details and Classes')
 ss.markdown('Data consists of 1.1GB of 16,600 images of different categories of food.')
@@ -121,7 +121,7 @@ ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovic
 
 
 ss.markdown('### Food Recognition step - Upload Image')
-image_path = ss.file_uploader("drop the image file here: ", type = ["jpg", "jpeg"])
+image_path = ss.file_uploader("drop the image file here: ", type = ["jpg", "jpeg", "webp"])
 
 if image_path:
   image = Image.open(image_path)
