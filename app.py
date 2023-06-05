@@ -79,20 +79,13 @@ target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
 target_nutrition = {"Bread": 108, "Dairy_product": 100, "Dessert": 279, "Egg": 220, "Fried_food": 378,
                  "Meat": 269, "Noodles/Pasta": 219, "Rice": 184, "Seafood": 395, "Soup": 58, "veggies/Fruit": 93}
 ss.set_page_config(page_title = "Food Recognition using Inception V3", layout = "wide")
-ss.title("An AI Based Neutirend Tracking and Analysis ")
+ss.title("An AI Based Nutrient Tracking and Analysis ")
 
 ss.markdown(
 '''
 This is the final year group project for ECM IV-A Batch 13\n
 ''')
 
-# ss.image("f1.jpg")
-ss.markdown(
-'''
-- Training on 16,600 images yielded 90% accuracy on train and 76% accuracy on validation. over 50 epochs.
-- This model is saved and used later
-'''
-)
 ss.markdown(
 '''
 ### Block Diagram

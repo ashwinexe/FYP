@@ -1,4 +1,4 @@
-# An AI Based Neutirend Tracking and Analysis
+# An AI Based Nutrient Tracking and Analysis
 2019 ECM IV A Batch 13
 
 Food recognition deployed on streamlit with inception v3 backend
@@ -11,8 +11,6 @@ In this project, we propose a novel system based on artificial intelligence (AI)
 
 #### Block Diagram
 ![](block_diagram.jpeg)
-- Training on 16,600 images yielded 90% accuracy on train and 76% accuracy on validation. over 50 epochs!
-- This model is saved and used later
 
 ### Dataset Details and Classes
 Data consists of 1.1GB of 16,600 images of different categories of food.
